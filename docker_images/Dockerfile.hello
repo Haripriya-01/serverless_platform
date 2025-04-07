@@ -1,0 +1,5 @@
+# File: serverless_platform/docker_images/Dockerfile.hello
+FROM python:3.12-slim
+COPY ../functions/hello.py /app/hello.py
+WORKDIR /app
+CMD ["python3", "-c", "import hello; print(hello.main())"]

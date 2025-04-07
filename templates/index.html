@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lambda Serverless</title>
+</head>
+<body>
+    <h1>Upload a Function</h1>
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <input type="submit" value="Register">
+    </form>
+
+    <h2>Registered Functions</h2>
+    <ul>
+        {% for func in functions %}
+            <li>
+                {{ func }}
+                <form action="/invoke/{{ func }}" method="post" style="display:inline;">
+                    <button type="submit">Invoke</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

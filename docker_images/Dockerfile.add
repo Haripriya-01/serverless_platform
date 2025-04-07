@@ -1,0 +1,5 @@
+# File: serverless_platform/docker_images/Dockerfile.add
+FROM python:3.12-slim
+COPY ../functions/add.py /app/add.py
+WORKDIR /app
+CMD ["python3", "-c", "import add; print(add.main())"]

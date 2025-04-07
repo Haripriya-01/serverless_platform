@@ -1,0 +1,8 @@
+{
+    "add": {
+        "path": "functions/add.py",
+        "description": "Adds two numbers and returns the result",
+        "docker_image": "add-function"
+    },
+    "hello": "functions/hello.py"
+}
